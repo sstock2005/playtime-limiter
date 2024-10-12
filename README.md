@@ -5,5 +5,5 @@ A simple plugin for paper 1.21.1 to restrict a certain player's play time every 
 
 # Usage
 - Clone this
-- Change the desired username in the main source file
+- Change the desired username in `src/main/java/com/sstock2005/playtime/PlaytimePlugin.java` on line 23
 - `./gradlew build`

@@ -2,13 +2,12 @@ import com.github.spotbugs.snom.SpotBugsTask
 import java.text.SimpleDateFormat
 
 plugins {
-    id 'checkstyle'
     id "com.github.spotbugs" version "6.0.24"
     id 'com.gradleup.shadow' version '8.3.3'
     id 'java'
 }
 
-group = "com.crimsonwarpedcraft.exampleplugin"
+group = "com.sstock2005.playtime"
 
 static def getTime() {
     SimpleDateFormat sdf = new SimpleDateFormat("yyMMdd-HHmm")
@@ -81,24 +80,6 @@ test {
 processResources {
     filesMatching("**/plugin.yml") {
         expand ( NAME: rootProject.name, VERSION: version, PACKAGE: project.group.toString() )
-    }
-}
-
-checkstyle {
-    toolVersion '10.18.2'
-    maxWarnings = 0
-}
-
-configurations.checkstyle {
-    resolutionStrategy.capabilitiesResolution.withCapability("com.google.collections:google-collections") {
-        select("com.google.guava:guava:23.0")
-    }
-}
-
-tasks.withType(Checkstyle).configureEach {
-    reports {
-        xml.required = false
-        html.required = true
     }
 }
 

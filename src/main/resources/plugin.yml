@@ -2,17 +2,14 @@ main: ${PACKAGE}.${NAME}
 name: ${NAME}
 version: "${VERSION}"
 api-version: "1.21.1"
-author: AUTHOR
-description: DESCRIPTION
+author: sstock2005
+description: A playtime limiter plugin for Minecraft
 commands:
-  ex:
-    description: Base command for EXAMPLE
-    usage: "For a list of commands, type /ex help"
-    aliases: example
+  ptl:
+    description: Playtime Limiter Help Command
+    usage: "For a list of commands, type /ptl help"
+    aliases: h
 permissions:
-  example.test:
-    description: DESCRIPTION
-    default: true
   example.*:
     description: Grants all other permissions
     default: false
